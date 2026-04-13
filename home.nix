@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-	home.username = "zynith";
-	home.homeDirectory = "/home/zynith";
+	home.username = "loginreward";
+	home.homeDirectory = "/home/loginreward";
 
 	home.stateVersion = "25.11";
 

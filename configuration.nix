@@ -8,7 +8,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  home-manager.users.zynith = import ./home.nix;
+  home-manager.users.loginreward = import ./home.nix;
   home-manager.backupFileExtension = "backup";
 
   programs.nix-ld.enable = true;
@@ -27,6 +27,8 @@
 	  xorg.libXrandr
 	  libxkbcommon
   ];
+
+  services.hardware.openrgb.enable = true;
 
   services.home-assistant = {
 	  enable = true;
@@ -60,11 +62,6 @@
   #             password = "2548";
   #         };
   #     }];
-  # };
-
-  # services.govee2mqtt = {
-  #  enable = true;
-  #  environmentFile = "/var/lib/govee2mqtt/.env";
   # };
 
   virtualisation.docker = {
@@ -142,7 +139,7 @@
   services.wivrn = {
 	  enable = true;
 	  openFirewall = true;
-	  defaultRuntime = true;
+	  # defaultRuntime = true;
 	  autoStart = true;
 
 # If you're running this with an nVidia GPU and want to use GPU Encoding (and don't otherwise have CUDA enabled system wide), you need to override the cudaSupport variable.
@@ -164,10 +161,10 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.zynith = {
+  users.users.loginreward = {
     isNormalUser = true;
     description = "Zynith";
-    extraGroups = [ "networkmanager" "wheel" "input" "wireshark" "docker" "dialout" "uucp" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "wireshark" "docker" "dialout" "uucp" "libvirtd" "kvm" ];
     shell = pkgs.zsh;
   };
 
@@ -200,7 +197,6 @@
 
   environment.systemPackages = 
   	(with pkgs; [
-	  neovim
 	  vim
 	  hyprland
 	  hyprshot
@@ -214,6 +210,9 @@
 	  nerd-fonts.jetbrains-mono
 	  nerd-fonts._3270
 	  nerd-fonts.roboto-mono
+      nerd-fonts.recursive-mono
+      nerd-fonts.space-mono
+      maple-mono.NL-NF
 	  reaper
 	  pavucontrol
 	  fish
@@ -325,6 +324,13 @@
 	  fzf
 	  zip
       mosquitto
+      vanilla-dmz
+      sxhkd
+      bspwm
+      picom
+      golangci-lint
+      waybar
+      swww
   ])
 
   ++
@@ -332,6 +338,7 @@
   (with pkgs-unstable; [
 	  noctalia-shell
 	  dms-shell
+	  neovim
   ]);
 
   fonts.packages = with pkgs; [

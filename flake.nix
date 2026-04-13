@@ -23,7 +23,7 @@
 					home-manager = {
 						useGlobalPkgs = true;
 						useUserPackages = true;
-						users.zynith = import ./home.nix;
+						users.loginreward = import ./home.nix;
 						backupFileExtension = "backup";
 					};
 				}
