@@ -3,11 +3,11 @@ vim.pack.add({
 	"https://github.com/saghen/blink.cmp",
 	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/nvim-lua/plenary.nvim",
-    "https://github.com/mason-org/mason.nvim",
-    "https://github.com/mason-org/mason-lspconfig.nvim",
-    "https://github.com/morhetz/gruvbox",
-    "https://github.com/folke/tokyonight.nvim",
-    "https://github.com/nvim-treesitter/nvim-treesitter",
+	"https://github.com/mason-org/mason.nvim",
+	"https://github.com/mason-org/mason-lspconfig.nvim",
+	"https://github.com/morhetz/gruvbox",
+	"https://github.com/folke/tokyonight.nvim",
+	"https://github.com/nvim-treesitter/nvim-treesitter",
 })
 
 local builtin = require("telescope.builtin")
@@ -57,30 +57,30 @@ require("blink.cmp").setup({
     fuzzy = { implementation = "lua" },
 })
 
-require("gruvbox").setup({
-    terminal_colors = true, -- add neovim terminal colors
-    undercurl = true,
-    underline = false,
-    bold = true,
-    italic = {
-        strings = false,
-        emphasis = false,
-        comments = false,
-        operators = false,
-        folds = false,
-    },
-    strikethrough = true,
-    invert_selection = false,
-    invert_signs = false,
-    invert_tabline = false,
-    invert_intend_guides = false,
-    inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "", -- can be "hard", "soft" or empty string
-    palette_overrides = {},
-    overrides = {},
-    dim_inactive = false,
-    transparent_mode = false,
-})
+-- require("gruvbox").setup({
+--     terminal_colors = true, -- add neovim terminal colors
+--     undercurl = true,
+--     underline = false,
+--     bold = true,
+--     italic = {
+--         strings = false,
+--         emphasis = false,
+--         comments = false,
+--         operators = false,
+--         folds = false,
+--     },
+--     strikethrough = true,
+--     invert_selection = false,
+--     invert_signs = false,
+--     invert_tabline = false,
+--     invert_intend_guides = false,
+--     inverse = true, -- invert background for search, diffs, statuslines and errors
+--     contrast = "", -- can be "hard", "soft" or empty string
+--     palette_overrides = {},
+--     overrides = {},
+--     dim_inactive = false,
+--     transparent_mode = false,
+-- })
 
 -- local transparent = false -- set to true if you would like to enable transparency
 --

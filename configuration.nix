@@ -182,6 +182,12 @@
   };
 
   programs.hyprland.enable = true;
+
+  xdg.portal = {
+      enable = true;
+      extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
+  };
+  
   programs.sway.enable = true;
 
   programs.niri.enable = true;
@@ -189,7 +195,13 @@
   programs.steam.enable = true;
 
   programs.fish.enable = true;
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
+  programs.zsh = {
+      enable = true;
+      interactiveShellInit = ''
+          fastfetch
+      '';
+  };
 
   programs.alvr.enable = true;
 

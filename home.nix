@@ -9,6 +9,28 @@
 	home.packages = [
 	];
 
+    # home.pointerCursor = {
+    #     enable = true;
+    #     gtk.enable = true;
+    #     # x11.enable = true;
+    #     package = pkgs.vanilla-dmz;
+    #     name = "Vanilla-DMZ";
+    #     size = 32;
+    #     # hyprcursor = {
+    #     #     enable = true;
+    #     #     size = config.home.pointerCursor.size;
+    #     # };
+    # };
+
+    home.pointerCursor = {
+        gtk.enable = true;
+        x11.enable = true;
+        package = pkgs.vanilla-dmz;
+        name = "Vanilla-DMZ";
+        size = 24;
+        hyprcursor.enable = true;
+    };
+
 	programs.bash = {
 		enable = true;
 		shellAliases = {
@@ -38,11 +60,6 @@
 		enable = true;
 		userName = "Zynith0";
 		userEmail = "nolan.lessard.music@gmail.com";
-	};
-
-	programs.vicinae = {
-		enable = true;
-		systemd.enable = true;
 	};
 
 	programs.tmux =	{
