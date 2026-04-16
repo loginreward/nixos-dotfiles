@@ -8,7 +8,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  home-manager.users.loginreward = import ./home.nix;
+  # home-manager.users.loginreward = import ./home.nix;
   home-manager.backupFileExtension = "backup";
 
   programs.nix-ld.enable = true;
@@ -343,6 +343,9 @@
       golangci-lint
       waybar
       swww
+      mumble
+      gruvbox-gtk-theme
+      gruvbox-plus-icons
   ])
 
   ++
