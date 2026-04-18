@@ -22,11 +22,75 @@
         };
     };
 
+    services.mpd = {
+        enable = true;
+        musicDirectory = "/home/loginreward/Music/";
+        extraConfig = ''
+            audio_output {
+                type "pipewire"
+                    name "My PipeWire Output"
+            }
+        '';
+        dataDir = "/home/loginreward/Music/";
+    };
+
+    programs.emacs = {
+        enable = true;
+        package = pkgs.emacs;
+        extraPackages = epkgs: [
+            epkgs.evil
+            epkgs.ivy
+            epkgs.counsel
+            epkgs.doom-themes
+            epkgs.org-modern
+            epkgs.lsp-mode
+            epkgs.lsp-ui
+            epkgs.rust-mode
+            epkgs.go-mode
+            epkgs.company
+            epkgs.magit
+        ];
+        extraConfig = ''
+        (setq standard-indent 2)
+        (setq inhibit-startup-message t)
+        (setq visible-bell t)
+        (scroll-bar-mode -1)
+        (tool-bar-mode -1)
+        (tooltip-mode -1)
+        (set-fringe-mode 10)
+        (menu-bar-mode -1)
+        (require 'evil)
+        (evil-mode 1)
+        (set-face-attribute 'default nil :font "Maple Mono NL NF")
+        (load-theme 'doom-gruvbox)
+        (ivy-mode 1)
+        (keymap-global-set "C-s" #'swiper-isearch)
+        (keymap-global-set "C-c C-r" #'ivy-resume)
+        (keymap-global-set "<f6>" #'ivy-resume)
+        (keymap-global-set "M-x" #'counsel-M-x)
+        (keymap-global-set "C-x C-f" #'counsel-find-file)
+        (keymap-global-set "<f1> f" #'counsel-describe-function)
+        (keymap-global-set "<f1> v" #'counsel-describe-variable)
+        (keymap-global-set "<f1> o" #'counsel-describe-symbol)
+        (keymap-global-set "<f1> l" #'counsel-find-library)
+        (keymap-global-set "<f2> i" #'counsel-info-lookup-symbol)
+        (keymap-global-set "<f2> u" #'counsel-unicode-char)
+        (keymap-global-set "C-c g" #'counsel-git)
+        (keymap-global-set "C-c j" #'counsel-git-grep)
+        (keymap-global-set "C-c k" #'counsel-ag)
+        (keymap-global-set "C-x l" #'counsel-locate)
+        (keymap-global-set "C-S-o" #'counsel-rhythmbox)
+        (keymap-set minibuffer-local-map "C-r" #'counsel-minibuffer-history)
+        (with-eval-after-load 'org (global-org-modern-mode))
+        (require 'lsp-mode)
+        (add-hook 'rust-mode-hook #'lsp)
+        (add-hook 'go-mode-hook #'lsp)
+        (add-hook 'after-init-hook 'global-company-mode)
+        '';
+    };
+
 	programs.bash = {
 		enable = true;
-		shellAliases = {
-			btw = "echo test";
-		};
 	};
 
 	programs.zsh = {

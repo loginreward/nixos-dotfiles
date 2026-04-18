@@ -30,6 +30,12 @@
 
   services.hardware.openrgb.enable = true;
 
+  services.music-assistant = {
+      enable = true;
+      providers = [ "jellyfin" "hass" ];
+  };
+
+
   services.home-assistant = {
 	  enable = true;
 	  extraComponents = [
@@ -40,11 +46,25 @@
 		  "shopping_list"
 		  "isal"
           "tplink"
-          # "mqtt"
-          # "zigbee"
+          "ollama"
+          "cast"
+          "mpd"
+          "open_meteo"
+          "automation"
+          "scene"
+          "script"
+          "music_assistant"
+          "media_player"
 	  ];
 	  config = {
+          homeassistant = {
+              media_dirs = {
+                  "local" = "/var/lib/hass/media";
+              };
+          };
 		  default_config = {};
+          "script ui" = "!include scripts.yaml";
+          "scene" = "!include scenes.yaml";
 	  };
   };
 
@@ -308,7 +328,6 @@
 	  sqlite
 	  zed-editor
 	  vicinae
-	  ollama-vulkan
 	  unzip
 	  jq
 	  bun
@@ -346,6 +365,11 @@
       mumble
       gruvbox-gtk-theme
       gruvbox-plus-icons
+      openai-whisper
+      pyright
+      gnome-boxes
+      ncmpcpp
+      espeak
   ])
 
   ++
@@ -354,6 +378,7 @@
 	  noctalia-shell
 	  dms-shell
 	  neovim
+	  ollama-vulkan
   ]);
 
   fonts.packages = with pkgs; [
