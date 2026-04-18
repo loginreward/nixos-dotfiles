@@ -354,22 +354,23 @@
 	  deadbeef
 	  fzf
 	  zip
-      mosquitto
-      vanilla-dmz
-      sxhkd
-      bspwm
-      picom
-      golangci-lint
-      waybar
-      swww
-      mumble
-      gruvbox-gtk-theme
-      gruvbox-plus-icons
-      openai-whisper
-      pyright
-      gnome-boxes
-      ncmpcpp
-      espeak
+	  mosquitto
+	  vanilla-dmz
+	  sxhkd
+	  bspwm
+	  picom
+	  golangci-lint
+	  waybar
+	  swww
+	  mumble
+	  gruvbox-gtk-theme
+	  gruvbox-plus-icons
+	  openai-whisper
+	  pyright
+	  gnome-boxes
+	  ncmpcpp
+	  espeak
+	  thunderbird
   ])
 
   ++
