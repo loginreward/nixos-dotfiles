@@ -73,7 +73,6 @@
         (keymap-global-set "C-c j" #'counsel-git-grep)
         (keymap-global-set "C-c k" #'counsel-ag)
         (keymap-global-set "C-x l" #'counsel-locate)
-        (keymap-set minibuffer-local-map "C-r" #'counsel-minibuffer-history)
         (require 'lsp-mode)
         (add-hook 'rust-mode-hook #'lsp)
         (add-hook 'go-mode-hook #'lsp)
@@ -95,6 +94,7 @@
 		shellAliases = {
 			nixrs = "sudo nixos-rebuild switch";
 			vim = "nvim";
+			emacs = "emacs -nw";
 		};
 	};
 
