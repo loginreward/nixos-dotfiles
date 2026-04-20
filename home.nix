@@ -87,6 +87,11 @@
 	(org-roam-db-autosync-mode)
 	(org-roam-setup)
 	(setq org-rom-completion-everywhere t)
+	(recentf-mode 1)
+	(setq history-length 25)
+	(savehist-mode 1)
+	(save-place-mode 1)
+	(setq use-dialog-box nil)
         '';
     };
 

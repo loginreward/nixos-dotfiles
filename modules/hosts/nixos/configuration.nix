@@ -11,6 +11,8 @@
   # home-manager.users.loginreward = import ./home.nix;
   home-manager.backupFileExtension = "backup";
 
+  services.xserver.displayManager.startx.enable = true;
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
 	  wayland
@@ -28,6 +30,8 @@
 	  libxkbcommon
   ];
 
+  services.emacs.enable = true;
+
   services.hardware.openrgb.enable = true;
 
   services.music-assistant = {
@@ -35,6 +39,7 @@
       providers = [ "jellyfin" "hass" ];
   };
 
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   services.home-assistant = {
 	  enable = true;
@@ -116,6 +121,7 @@
 	};
   };
 
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -202,6 +208,7 @@
   };
 
   programs.hyprland.enable = true;
+  services.xserver.windowManager.xmonad.enable = true;
 
   xdg.portal = {
       enable = true;
@@ -371,6 +378,8 @@
 	  ncmpcpp
 	  espeak
 	  thunderbird
+	  feh
+	  polybar
   ])
 
   ++
