@@ -1,0 +1,15 @@
+* My NixOS config
+** What does this config include?
+- modular configurations
+- hyprland
+- niri
+- waybar
+- neovim
+- emacs
+- home-manager
+- NO dependencies (other than home-manager)
+*** TODO add neovim config
+*** TODO finish niri config
+** What do you mean by no dependencies?
+Pretty much, this configuration doesn't use any external dependencies like flake-parts.
+It's all written by me, except for home-manager. It's honestly not that great of a configuration, but it works and imo looks good.
