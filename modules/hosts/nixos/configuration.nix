@@ -4,6 +4,8 @@
   imports =
     [
       ./hardware-configuration.nix
+      ../../features/niri/niri.nix
+      ../../features/hyprland/hyprland.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -380,6 +382,7 @@
 	  thunderbird
 	  feh
 	  polybar
+	  xwayland-satellite
   ])
 
   ++

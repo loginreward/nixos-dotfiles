@@ -23,7 +23,9 @@
 					home-manager = {
 						useGlobalPkgs = true;
 						useUserPackages = true;
-						users.loginreward = import ./home.nix;
+						users.loginreward =  {
+                            imports = [ ./modules/home/home.nix ./modules/home/emacs.nix ];
+                        };
 						backupFileExtension = "backup";
 					};
 				}
