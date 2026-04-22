@@ -5,7 +5,7 @@ local yank_group = augroup('HighlightYank', {})
 require("keymaps")
 require("plugins")
 -- require("netberry.init").colorscheme()
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme retrogreen")
 vim.o.background = "dark"
 
 -- builtin autocomplete

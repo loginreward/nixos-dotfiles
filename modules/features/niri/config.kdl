@@ -97,7 +97,7 @@ layout {
     // You can change how the focus ring looks.
     focus-ring {
         width 1.5
-        active-color "#7fc8ff"
+        active-color "#cba6f7"
         inactive-color "#505050"
     }
 

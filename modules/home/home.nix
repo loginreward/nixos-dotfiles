@@ -86,13 +86,13 @@
 		'';
 	};
 
-	# home.file = {
+	home.file = {
 	#   ".config/niri".source = ./config/niri;
-	#   ".config/hypr".source = ./config/hypr;
-	#   ".config/nvim".source = ./config/nvim;
-	#   ".config/nvim".recursive = true;
+	  ".config/hypr".source = ../features/hyprland;
+	  ".config/nvim".source = ../../config/nvim;
+	  ".config/nvim".recursive = true;
 	#   ".config/sway".source = ./config/sway;
-	# };
+	};
 
 	home.sessionVariables = {
 		EDITOR = "emacs";

@@ -253,6 +253,8 @@
 	  nerd-fonts.roboto-mono
       nerd-fonts.recursive-mono
       nerd-fonts.space-mono
+      nerd-fonts.iosevka
+      nerd-fonts.iosevka-term
       maple-mono.NL-NF
 	  reaper
 	  pavucontrol
