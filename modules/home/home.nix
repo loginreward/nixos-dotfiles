@@ -116,7 +116,7 @@
 	};
 
 	home.sessionVariables = {
-		EDITOR = "emacs";
+		EDITOR = "nvim";
 	};
 
 	programs.home-manager.enable = true;
