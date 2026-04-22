@@ -193,7 +193,7 @@
     isNormalUser = true;
     description = "Zynith";
     extraGroups = [ "networkmanager" "wheel" "input" "wireshark" "docker" "dialout" "uucp" "libvirtd" "kvm" ];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   services.jellyfin = {
@@ -385,6 +385,7 @@
 	  feh
 	  polybar
 	  xwayland-satellite
+      zoxide
   ])
 
   ++

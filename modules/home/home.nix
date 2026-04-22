@@ -52,6 +52,27 @@
 		};
 	};
 
+    programs.fish = {
+        enable = true;
+        shellAliases = {
+			vim = "nvim";
+        };
+        shellInit = ''
+        fastfetch
+        set -U fish_greeting ""
+        bind alt-w cdi repaint
+        '';
+    };
+
+    programs.starship.enable = true;
+    programs.starship.enableFishIntegration = true;
+
+    programs.zoxide = {
+        enable = true;
+        enableFishIntegration = true;
+        options = [ "--cmd cd" ];
+    };
+
 	programs.fzf = {
 		enable = true;
 		enableZshIntegration = true;
