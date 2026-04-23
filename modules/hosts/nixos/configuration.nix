@@ -15,6 +15,8 @@
 
   services.xserver.displayManager.startx.enable = true;
 
+  virtualisation.libvirtd.enable = true;
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
 	  wayland
@@ -386,6 +388,7 @@
 	  polybar
 	  xwayland-satellite
       zoxide
+      gnupg
   ])
 
   ++

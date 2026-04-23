@@ -2,11 +2,8 @@ local colors = {
     bg = "#000000",
     fg = "#fafff9", 
     green = "#57e389",
-    red = green,
-    blue = green,
     darkGreen = "#1fe049",
     darkerGreen = "#159d33",
-    cyan = green,
     comment = "#36403d",
     cursorline = "#2a2e2b",
     visual = "#5e6e67",
@@ -25,6 +22,7 @@ vim.api.nvim_set_hl(0, "LineNr", { fg = colors.cursorline })
 vim.api.nvim_set_hl(0, "CursorLineNr", { fg = colors.green, bold = true })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = colors.bg })
 vim.api.nvim_set_hl(0, "Folded", { fg = colors.cursorline, bg = colors.cursorline })
+
 
 vim.api.nvim_set_hl(0, "Conditional", { fg = colors.green, italic = true })
 vim.api.nvim_set_hl(0, "Comment", { fg = colors.cursorline, italic = true })
