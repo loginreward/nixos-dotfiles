@@ -301,7 +301,6 @@
 	  everforest-gtk-theme
 	  fzf
 	  harper
-	  slimevr
 	  blueberry
 	  nodejs_24
 	  astro-language-server
@@ -389,6 +388,7 @@
 	  xwayland-satellite
       zoxide
       gnupg
+      swaynotificationcenter
   ])
 
   ++
