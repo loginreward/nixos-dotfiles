@@ -398,18 +398,21 @@
        src = ./bins;
        dontUnpack = true;
        dontBuild = true;
-       # nativeBuildInputs = [ 
-       #     pkgs.autoPatchelfHook 
-       # ];
-
-       # buildInputs = [ 
-       #     pkgs.stdenv.cc.cc.lib 
-       #     pkgs.zlib 
-       # ];
        installPhase = ''
            mkdir -p $out/bin
            cp $src/jvrun $out/bin/jvrun
            chmod +x $out/bin/jvrun
+       '';
+       })
+      (pkgs.stdenv.mkDerivation {
+       name = "mvnit";
+       src = ./bins;
+       dontUnpack = true;
+       dontBuild = true;
+       installPhase = ''
+           mkdir -p $out/bin
+           cp $src/mvnit $out/bin/mvnit
+           chmod +x $out/bin/mvnit
        '';
        })
       inkscape
@@ -421,6 +424,7 @@
       rmpc
       picard
       alacritty
+      lazygit
   ])
 
   ++
