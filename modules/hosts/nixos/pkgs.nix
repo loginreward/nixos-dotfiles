@@ -37,9 +37,6 @@
 	  gopls
 	  gcc
 	  python313Packages.python
-	  python313Packages.evdev
-	  python313Packages.pygame
-	  python313Packages.pygame-gui
 	  pyright
 	  alvr
 	  bluez
@@ -48,20 +45,11 @@
 	  tmux
 	  jack2
 	  btop
-	  feishin
-	  jellyfin
-	  jellyfin-web
-	  jellyfin-ffmpeg
-	  apple-cursor
 	  nwg-look
-	  brave
 	  nemo
 	  zsh
-	  oh-my-zsh
-	  bibata-cursors
 	  clang
 	  tree-sitter
-	  everforest-gtk-theme
 	  fzf
 	  harper
 	  blueberry
@@ -76,33 +64,20 @@
 	  android-tools
 	  openssl_3
 	  openvr
-	  nmap
-	  wireshark
-	  lutris
-	  heroic
 	  wine
 	  vulkan-tools
 	  protonup-qt
-	  godot
 	  playerctl
 	  qt6.qtmultimedia
 	  qt6.qtwayland
 	  kdePackages.qt5compat
 	  qmk
-	  dos2unix
-	  mpvpaper
 	  obsidian
 	  pulseaudio
 	  element-desktop
 	  portaudio
-	  freecad
 	  cmake
-  	  orca-slicer
-	  plasticity
-	  pkg-config
 	  sqlite
-	  zed-editor
-	  vicinae
 	  unzip
 	  jq
 	  bun
@@ -112,41 +87,21 @@
 	  gh
 	  zls
 	  zig
-	  chirp
-	  catppuccin-kde
 	  foot
-	  nushell
 	  starship
-	  sway
-	  flameshot
 	  rofi
-	  i2pd
 	  librewolf
 	  ripgrep
 	  libinput
 	  alsa-utils
-	  deadbeef
 	  fzf
 	  zip
-	  mosquitto
-	  vanilla-dmz
-	  sxhkd
-	  bspwm
-	  picom
-	  golangci-lint
 	  waybar
 	  swww
 	  mumble
-	  gruvbox-gtk-theme
-	  gruvbox-plus-icons
-	  openai-whisper
 	  pyright
-	  gnome-boxes
-	  ncmpcpp
-	  espeak
 	  thunderbird
 	  polybar
-	  xwayland-satellite
       zoxide
       gnupg
       swaynotificationcenter
