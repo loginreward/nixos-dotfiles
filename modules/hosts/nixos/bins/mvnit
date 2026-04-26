@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+read -p "What is your organization?: " organization
+read -p "What is the name of this project?: " project_name
+
+mvn archetype:generate -DgroupId=com.$organization.$project_name -DartifactId=$project_name -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
