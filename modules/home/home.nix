@@ -58,7 +58,6 @@
 			vim = "nvim";
         };
         shellInit = ''
-        fastfetch
         set -U fish_greeting ""
         bind alt-w cdi repaint
         set -g fish_cursor_default block
