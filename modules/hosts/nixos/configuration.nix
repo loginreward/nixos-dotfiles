@@ -10,7 +10,6 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # home-manager.users.loginreward = import ./home.nix;
   home-manager.backupFileExtension = "backup";
 
   services.xserver.displayManager.startx.enable = true;
@@ -33,6 +32,10 @@
 	  xorg.libXrandr
 	  libxkbcommon
   ];
+
+  programs.java = {
+      enable = true;
+  };
 
   services.emacs.enable = true;
 
@@ -383,12 +386,41 @@
 	  ncmpcpp
 	  espeak
 	  thunderbird
-	  feh
 	  polybar
 	  xwayland-satellite
       zoxide
       gnupg
       swaynotificationcenter
+      odin
+      jdt-language-server
+      (pkgs.stdenv.mkDerivation {
+       name = "jvrun";
+       src = ./bins;
+       dontUnpack = true;
+       dontBuild = true;
+       # nativeBuildInputs = [ 
+       #     pkgs.autoPatchelfHook 
+       # ];
+
+       # buildInputs = [ 
+       #     pkgs.stdenv.cc.cc.lib 
+       #     pkgs.zlib 
+       # ];
+       installPhase = ''
+           mkdir -p $out/bin
+           cp $src/jvrun $out/bin/jvrun
+           chmod +x $out/bin/jvrun
+       '';
+       })
+      inkscape
+      cmatrix
+      maven
+      clang-tools
+      clang
+      gnumake
+      rmpc
+      picard
+      alacritty
   ])
 
   ++

@@ -24,7 +24,7 @@
 						useGlobalPkgs = true;
 						useUserPackages = true;
 						users.loginreward =  {
-                            imports = [ ./modules/home/home.nix ./modules/home/emacs.nix ./modules/home/starship.nix ];
+                            imports = [ ./modules/home/home.nix ./modules/home/emacs.nix ./modules/home/starship.nix ./modules/features/kitty/kitty.nix ];
                         };
 						backupFileExtension = "backup";
 					};

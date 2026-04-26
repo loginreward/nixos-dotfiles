@@ -1,0 +1,14 @@
+[general]
+import = [
+    "./themes/retrogreen.toml"
+]
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "buttonless"
+opacity = 0.8
+
+[font]
+normal.family = "IosevkaTerm Nerd Font"
+size = 16

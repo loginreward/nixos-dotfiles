@@ -61,6 +61,13 @@
         fastfetch
         set -U fish_greeting ""
         bind alt-w cdi repaint
+        set -g fish_cursor_default block
+        set -g fish_cursor_insert block
+        set -g fish_cursor_replace_one block
+        set -g fish_cursor_replace block
+        set -g fish_cursor_external block
+        set -g fish_cursor_visual block
+        set -g fish_vi_force_cursor 1
         '';
     };
 
@@ -80,8 +87,12 @@
 
 	programs.git = {
 		enable = true;
-		userName = "Zynith0";
-		userEmail = "nolan.lessard.music@gmail.com";
+        settings = {
+            user = {
+                name = "Zynith0";
+                email = "nolan.lessard.music@gmail.com";
+            };
+        };
 	};
 
 	programs.tmux =	{
@@ -112,6 +123,8 @@
 	  ".config/hypr".source = ../features/hyprland;
 	  ".config/nvim".source = ../../config/nvim;
 	  ".config/nvim".recursive = true;
+	  ".config/waybar".source = ../../config/waybar;
+	  ".config/alacritty".source = ../../config/alacritty;
 	#   ".config/sway".source = ./config/sway;
 	};
 

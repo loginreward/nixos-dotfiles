@@ -37,6 +37,7 @@ vim.lsp.enable("tailwindcss")
 vim.lsp.enable("ols")
 vim.lsp.enable("nil_ls")
 vim.lsp.enable("zls")
+vim.lsp.enable("jdtls")
 
 require("blink.cmp").setup({
     keymap = {
