@@ -3,7 +3,7 @@
 - modular configurations
 - hyprland
 - niri
-- waybar
+- quickshell
 - neovim
 - emacs
 - home-manager
