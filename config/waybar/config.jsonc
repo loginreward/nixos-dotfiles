@@ -5,7 +5,6 @@
     "height": 30, 
     "spacing": 4, 
 
-    // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
         "custom/sep",
@@ -14,7 +13,6 @@
     ],
     "modules-center": [
     ],
-
     "modules-right": [
         "custom/sep",
         "network",
@@ -29,16 +27,9 @@
     ],
 
     // Modules configuration
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
-    },
     "clock": {
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%I:%M %p}"
     },
     "cpu": {
         "format": "CPU: {usage}%",
