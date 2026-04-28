@@ -139,6 +139,7 @@
       picard
       alacritty
       lazygit
+      mpc
   ])
 
   ++
