@@ -124,6 +124,7 @@
 	  ".config/nvim".recursive = true;
 	  ".config/waybar".source = ../../config/waybar;
 	  ".config/alacritty".source = ../../config/alacritty;
+	  ".config/quickshell".source = ../../config/quickshell;
 	#   ".config/sway".source = ./config/sway;
 	};
 
