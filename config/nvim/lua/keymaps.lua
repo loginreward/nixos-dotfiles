@@ -11,3 +11,5 @@ end)
 vim.keymap.set("n", "<leader>vrn", function()
 	vim.lsp.buf.rename()
 end)
+
+vim.keymap.set("n", "<leader>mt", "<cmd>term<CR>amvn test<CR>")
