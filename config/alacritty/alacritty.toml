@@ -10,5 +10,5 @@ decorations = "buttonless"
 opacity = 0.8
 
 [font]
-normal.family = "IosevkaTerm Nerd Font"
-size = 16
+normal.family = "3270 Nerd Font"
+size = 20
