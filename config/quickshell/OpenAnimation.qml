@@ -8,8 +8,7 @@ Rectangle {
     required property bool isRunning
     id: rect
     color: "#57e389"
-    // anchors.fill: parent
-    width: parent.width
+    width: parent.width * 1.2
     height: parent.height
 
     PropertyAnimation {

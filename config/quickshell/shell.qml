@@ -2,10 +2,28 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Wayland
 import Quickshell.Hyprland
+import Quickshell.Services.Notifications
 import QtQuick
 import QtQuick.Layouts
 
 Scope {
+    id: scope
+    NotificationServer {
+        id: server
+        bodyMarkupSupported: true 
+        actionsSupported: true
+
+        onNotification: (notification) => {
+            var component = Qt.createComponent("NotificationDisplay.qml")
+            if (component.status == Component.Ready) {
+                var notificationDisplay = component.createObject(scope, {
+                    appName: notification.appName,
+                    summary: notification.summary
+                });
+            }
+        }
+    }
+
     Variants {
         model: Quickshell.screens
 
@@ -13,8 +31,8 @@ Scope {
             PanelWindow {
                 required property var modelData
                 screen: modelData
-                property string fontFamily: "IosevkaTerm Nerd Font"
-                property int fontSize: 18
+                property string fontFamily: "3270 Nerd Font"
+                property int fontSize: 22
                 property bool isMenuOpen: false
                 property bool isHoveringAnything: false
                 property bool isMusicPaused: false
@@ -31,7 +49,6 @@ Scope {
                         }
                     }
                 }
-
                 id: root
 
                 color: "#000000"
@@ -108,7 +125,18 @@ Scope {
                         color: "#000000"
                         opacity: 0
 
-                        Scanline{}
+                        Image {
+                            anchors.fill: parent
+                            source: "square.png"
+                            fillMode: Image.Tile
+                            opacity: 0.08
+                            smooth: false
+                        }
+
+                        Scanline {
+                            loop: true
+                        }
+
                         OpenAnimation {
                             isRunning: isMenuOpen
                         }
