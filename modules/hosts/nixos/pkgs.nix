@@ -140,6 +140,8 @@
       alacritty
       lazygit
       mpc
+      gnome-boxes
+      niri
   ])
 
   ++
