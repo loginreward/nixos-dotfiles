@@ -108,7 +108,6 @@
       openwakeword = {
           enable = true;
           uri = "tcp://0.0.0.0:10400";
-              preloadModels = [ "hey_jarvis" ]; # Pre-caches models so they are ready on boot
       };
   };
 
