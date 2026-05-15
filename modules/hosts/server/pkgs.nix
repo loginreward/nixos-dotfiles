@@ -6,7 +6,7 @@
         git
         wyoming-satellite
         yt-dlp
-        nvim
+        neovim
     ])
 
   ++
