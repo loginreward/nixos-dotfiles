@@ -48,12 +48,12 @@
           command = "arecord -r 16000 -c 1 -f S16_LE -t raw";
           autoGain = 5;
           noiseSuppression = 2;
-      }
+      };
 
       sound = {
           command = "aplay -r 22050 -c 1 -f S16_LE -t raw";
-      }
-  }
+      };
+  };
 
   services.home-assistant = {
 	  enable = true;
