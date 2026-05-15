@@ -37,21 +37,21 @@
 
   services.xserver.videoDrivers = [ "amdgpu" ];
 
-  services.wyoming.satellite = {
-      enable = true;
-      user = "server";
-      group = "users";
-
-      microphone = {
-          command = "arecord -r 16000 -c 1 -f S16_LE -t raw";
-          autoGain = 5;
-          noiseSuppression = 2;
-      };
-
-      sound = {
-          command = "aplay -r 22050 -c 1 -f S16_LE -t raw";
-      };
-  };
+  # services.wyoming.satellite = {
+  #     enable = true;
+  #     user = "server";
+  #     group = "users";
+  #
+  #     microphone = {
+  #         command = "arecord -r 16000 -c 1 -f S16_LE -t raw";
+  #         autoGain = 5;
+  #         noiseSuppression = 2;
+  #     };
+  #
+  #     sound = {
+  #         command = "aplay -r 22050 -c 1 -f S16_LE -t raw";
+  #     };
+  # };
 
   services.home-assistant = {
 	  enable = true;
@@ -79,16 +79,37 @@
           "wyoming"
 	  ];
 	  config = {
-          homeassistant = {
-              media_dirs = {
-                  "local" = "/var/lib/hass/media";
-              };
-          };
+          # homeassistant = {
+          #     media_dirs = {
+          #         "local" = "/var/lib/hass/media";
+          #     };
+          # };
 		  default_config = {};
           assist_pipeline = {};
-          "script ui" = "!include scripts.yaml";
-          "scene" = "!include scenes.yaml";
+          # "script ui" = "!include scripts.yaml";
+          # "scene" = "!include scenes.yaml";
 	  };
+  };
+
+  services.wyoming = {
+      faster-whisper.servers."default" = {
+          enable = true;
+          uri = "tcp://0.0.0.0:10300";
+          model = "medium";
+          language = "en";
+      };
+
+      piper.servers."default" = {
+          enable = true;
+          uri = "tcp://0.0.0.0:10200";
+              voice = "en_US-lessac-medium";
+      };
+
+      openwakeword = {
+          enable = true;
+          uri = "tcp://0.0.0.0:10400";
+              preloadModels = [ "hey_jarvis" ]; # Pre-caches models so they are ready on boot
+      };
   };
 
   # services.mosquitto = {
