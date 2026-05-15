@@ -72,7 +72,7 @@
           "script"
           "music_assistant"
           "media_player"
-          "assistant_pipeline"
+          "assist_pipeline"
           "whisper"
           "piper"
           "wake_word"
@@ -85,7 +85,7 @@
               };
           };
 		  default_config = {};
-          assistant_pipeline = {};
+          assist_pipeline = {};
           "script ui" = "!include scripts.yaml";
           "scene" = "!include scenes.yaml";
 	  };
