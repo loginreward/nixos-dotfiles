@@ -39,17 +39,17 @@
 			system = "x86_64-linux";
 			modules = [
 				./modules/hosts/server/configuration.nix
-				# home-manager.nixosModules.home-manager
-				# {
-				# 	home-manager = {
-				# 		useGlobalPkgs = true;
-				# 		useUserPackages = true;
-				# 		users.loginreward =  {
-				#                         imports = [ ./modules/home/home.nix ./modules/home/emacs.nix ./modules/home/starship.nix ./modules/features/kitty/kitty.nix ];
-				#                     };
-				# 		backupFileExtension = "backup";
-				# 	};
-				# }
+				home-manager.nixosModules.home-manager
+				{
+					home-manager = {
+						useGlobalPkgs = true;
+						useUserPackages = true;
+                        users.zynith =  {
+                            imports = [ ./modules/home/server.nix ];
+                        };
+						backupFileExtension = "backup";
+					};
+				}
 			];
 			specialArgs = {
 				inherit pkgs-unstable;

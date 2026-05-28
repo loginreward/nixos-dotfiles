@@ -35,25 +35,6 @@
             libxkbcommon
     ];
 
-    services.mpd = {
-        enable = true;
-        user = "zynith"; 
-
-        network.listenAddress = "any"; 
-        network.port = 6600;
-
-        extraConfig = ''
-            audio_output {
-                type            "pipewire"
-                name            "Wyoming Satellite PipeWire"
-            }
-        '';
-    };
-
-    systemd.services.mpd.environment = {
-        XDG_RUNTIME_DIR = "/run/user/1000"; 
-    };
-
     services.music-assistant = {
         enable = true;
         providers = [ "jellyfin" "hass" "opensubsonic" ];
