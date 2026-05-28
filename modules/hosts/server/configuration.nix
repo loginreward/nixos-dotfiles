@@ -35,6 +35,25 @@
             libxkbcommon
     ];
 
+    services.mpd = {
+        enable = true;
+        user = "zynith"; 
+
+        network.listenAddress = "any"; 
+        network.port = 6600;
+
+        extraConfig = ''
+            audio_output {
+                type            "pipewire"
+                name            "Wyoming Satellite PipeWire"
+            }
+        '';
+    };
+
+    systemd.services.mpd.environment = {
+        XDG_RUNTIME_DIR = "/run/user/1000"; 
+    };
+
     services.music-assistant = {
         enable = true;
         providers = [ "jellyfin" "hass" "opensubsonic" ];
@@ -241,7 +260,7 @@
 
     nixpkgs.config.allowUnfree = true;
 
-    networking.firewall.allowedTCPPorts = [ 10200 10300 10400 10700 8123 8096 8095 ];
+    networking.firewall.allowedTCPPorts = [ 10200 10300 10400 10700 8123 8096 8095 6600 ];
     networking.firewall.allowedUDPPorts = [ 2089 8080 1883 8123 9943 9944 4040 9942 8082 9001 9000 9999 20002 8095 ];
 
     system.stateVersion = "25.11";
