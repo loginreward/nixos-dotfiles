@@ -99,44 +99,6 @@
             assist_pipeline = {};
             "script ui" = "!include scripts.yaml";
             "scene" = "!include scenes.yaml";
-            automation = [
-            {
-                alias = "Voice - Music Assistant Play Track";
-                description = "Trigger Music Assistant using Wyoming Voice Sentence Slots";
-                mode = "single";
-
-                trigger = [
-                {
-                    trigger = "sentence";
-                    sentences = [
-                        "play {track} by {artist}"
-                        "play the song {track} by {artist}"
-                        "play the track {track} by {artist}"
-                    ];
-                }
-                ];
-
-                action = [
-                {
-                    action = "mass.play_media";
-                    target = {
-                        entity_id = "media_player.mdi";
-                    };
-                    data = {
-                        media_id = "{{ trigger.slots.track }} {{ trigger.slots.artist }}";
-                        media_type = "track";
-                        enqueue_mode = "replace";
-                    };
-                }
-                {
-                    action = "action_intent_script.set_conversation_response";
-                    data = {
-                        text = "Now playing {{ trigger.slots.track }} by {{ trigger.slots.artist }}";
-                    };
-                }
-                ];
-            }
-            ];
         };
     };
 
@@ -275,6 +237,11 @@
 
     programs.sway.enable = true;
     programs.fish.enable = true;
+
+    services.openssh = {
+        enable = true;
+        settings.PasswordAuthentication = true;
+    };
 
     nixpkgs.config.allowUnfree = true;
 
