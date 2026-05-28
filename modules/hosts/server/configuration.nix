@@ -47,8 +47,10 @@
         name = "nixos-satellite";
         uri = "tcp://0.0.0.0:10700";
 
-        microphone.command = "arecord -q -r 16000 -c 1 -f S16_LE";
-        sound.command = "aplay -q -r 22050 -c 1 -f S16_LE";
+        vad.enable = false;
+
+        microphone.command = "arecord -q -r 16000 -c 1 -f S16_LE -t raw";
+        sound.command = "aplay -q -r 22050 -c 1 -f S16_LE -t raw";
 
         sounds = {
             awake = "/home/zynith/nixos-dotfiles/modules/hosts/server/voice_assistant/awake.wav";
