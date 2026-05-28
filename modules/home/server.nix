@@ -12,6 +12,10 @@
     services.mpd = {
         enable = true;
         musicDirectory = "/home/zynith/Music/";
+
+        network.listenAddress = "0.0.0.0";
+        network.port = "6600";
+
         extraConfig = ''
             audio_output {
                 type "pipewire"
