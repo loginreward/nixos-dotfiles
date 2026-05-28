@@ -11,6 +11,7 @@
 
     services.mpd = {
         enable = true;
+        musicDirectory = "/home/zynith/Music/";
         extraConfig = ''
             audio_output {
                 type "pipewire"
