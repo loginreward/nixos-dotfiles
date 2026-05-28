@@ -46,6 +46,7 @@
         group = "users";
         name = "nixos-satellite";
         uri = "tcp://0.0.0.0:10700";
+        wake.uri = "tcp://0.0.0.0:10400";
 
         extraArgs = [
             "--wake-word-name" "hey_jarvis"
