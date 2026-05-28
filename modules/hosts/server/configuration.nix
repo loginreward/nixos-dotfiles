@@ -129,12 +129,12 @@
                         {
                             title = "YouTube";
                             shortcut = "!y";
-                            url = "https://www.youtube.com/results?search_query={QUERY}"
+                            url = "https://www.youtube.com/results?search_query={QUERY}";
                         }
                         {
                             title = "Wikipedia";
                             shortcut = "!w";
-                            url = "https://en.wikipedia.org/wiki/{QUERY}"
+                            url = "https://en.wikipedia.org/wiki/{QUERY}";
                         }
                         ];
                     }
