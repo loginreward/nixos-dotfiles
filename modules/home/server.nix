@@ -20,6 +20,13 @@
             audio_output {
                 type "pipewire"
                 name "Wyoming Satellite Pipewire"
+                quality     "5.0"
+                max_clients "0"
+
+                format "44100:16:2"
+
+                always_on       "yes"         
+                tags            "yes"
             }
         '';
     };
