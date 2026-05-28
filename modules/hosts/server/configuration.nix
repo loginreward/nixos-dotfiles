@@ -127,12 +127,12 @@
                         search-engine = "startpage";
                         bangs = [
                         {
-                            title = "YouTube"
+                            title = "YouTube";
                             shortcut = "!y";
                             url = "https://www.youtube.com/results?search_query={QUERY}"
                         }
                         {
-                            title = "Wikipedia"
+                            title = "Wikipedia";
                             shortcut = "!w";
                             url = "https://en.wikipedia.org/wiki/{QUERY}"
                         }
