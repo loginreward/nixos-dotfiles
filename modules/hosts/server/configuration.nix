@@ -122,7 +122,9 @@
                 {
                     size = "full";
                     widgets = [
+                    {
                         type = "calendar";
+                    }
                     ];
                 }
                 ];
