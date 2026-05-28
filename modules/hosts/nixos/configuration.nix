@@ -77,6 +77,7 @@
           };
 		  default_config = {};
           "script ui" = "!include scripts.yaml";
+          "automation ui" = "!include automations.yaml";
           "scene" = "!include scenes.yaml";
 	  };
   };
