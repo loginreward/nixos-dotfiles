@@ -156,7 +156,10 @@
 
     services.navidrome = {
         enable = true;
-        settings.Address = "0.0.0.0";
+        settings = {
+            Address = "0.0.0.0";
+            MusicFolder = "/navidrome_music";
+        };
         openFirewall = true;
     };
 
