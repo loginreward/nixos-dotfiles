@@ -59,8 +59,8 @@
         sound.command = "aplay -q -r 22050 -c 1 -f S16_LE -t raw";
 
         sounds = {
-            awake = "/home/zynith/nixos-dotfiles/modules/hosts/server/voice_assistant/awake.wav";
-            done = "/home/zynith/nixos-dotfiles/modules/hosts/server/voice_assistant/done.wav";
+            awake = "/home/zynith/nixos-dotfiles/modules/hosts/server/voice_assistant/awake_correct_bit.wav";
+            done = "/home/zynith/nixos-dotfiles/modules/hosts/server/voice_assistant/done_correct_bit.wav";
         };
     };
 
