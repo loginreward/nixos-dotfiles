@@ -112,21 +112,29 @@
 
     services.glance = {
         enable = true;
+        openFirewall = true;
         settings = {
-        pages = [
+            server.host = "0.0.0.0";
+            pages = [
             {
                 name = "Homelab";
                 columns = [
-                    {
-                        size = "full";
-                        widgets = [
-                            type = "calendar";
-                        ];
-                    }
+                {
+                    size = "full";
+                    widgets = [
+                        type = "calendar";
+                    ];
+                }
                 ];
             }
-        ];
+            ];
         };
+    };
+
+    services.navidrome = {
+        enable = true;
+        settings.Address = "0.0.0.0";
+        openFirewall = true;
     };
 
     boot.kernelPackages = pkgs.linuxPackages_zen;
