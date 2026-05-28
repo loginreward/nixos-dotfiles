@@ -47,6 +47,11 @@
         name = "nixos-satellite";
         uri = "tcp://0.0.0.0:10700";
 
+        extraArgs = [
+            "--wake-word-name" "hey_jarvis"
+            "--wake-word-name" "hey_mycroft"
+        ];
+
         vad.enable = false;
 
         microphone.command = "arecord -q -r 16000 -c 1 -f S16_LE -t raw";
