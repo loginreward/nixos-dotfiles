@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+WINDOW_ID=$(niri msg --json windows | jq '.[] | select(.app_id == "discord") | .id' | head -n 1)
+[ -n "$WINDOW_ID" ] && niri msg action focus-window --id "$WINDOW_ID"
+

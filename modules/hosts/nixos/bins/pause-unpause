@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [[ $(playerctl status) == "Playing" ]]; then
+    playerctl pause
+elif [[ $(playerctl status) == "Paused" ]]; then
+    playerctl play
+fi

@@ -108,24 +108,13 @@
       odin
       jdt-language-server
       (pkgs.stdenv.mkDerivation {
-       name = "jvrun";
+       name = "matugen-switcher.sh";
        src = ./bins;
        dontUnpack = true;
        dontBuild = true;
        installPhase = ''
            mkdir -p $out/bin
-           cp $src/jvrun $out/bin/jvrun
-           chmod +x $out/bin/jvrun
-       '';
-       })
-      (pkgs.stdenv.mkDerivation {
-       name = "mvnit";
-       src = ./bins;
-       dontUnpack = true;
-       dontBuild = true;
-       installPhase = ''
-           mkdir -p $out/bin
-           cp $src/mvnit $out/bin/mvnit
+           cp $src/matugen-switcher.sh $out/bin/matugen-switcher
            chmod +x $out/bin/mvnit
        '';
        })

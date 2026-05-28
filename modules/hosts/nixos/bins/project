@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+proj_name=$(gum input --placeholder="What is the name of this project")
+
+mkdir ~/projects/$proj_name
+
+language=$(gum filter Go C Java Rust Markdown)
+
+cd ~/projects/$proj_name
+if [[ $language == "Rust" ]]; then
+    cargo init ~/projects/$proj_name
+elif [[ $language == "Go" ]]; then
+    go mod init github.com/loginreward/$proj_name
+    mkdir cmd
+    touch cmd/main.go
+elif [[ $language == "C" ]]; then
+    mkdir src
+    touch src/main.c
+    touch Makefile
+elif [[ $language == "Markdown" ]]; then
+    touch main.md
+fi
+
+touch ~/projects/$proj_name/CREATION_DATE
+touch ~/projects/$proj_name/TODO.md
+
+date "+%c" > ~/projects/$proj_name/CREATION_DATE
