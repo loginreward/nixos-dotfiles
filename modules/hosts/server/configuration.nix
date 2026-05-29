@@ -173,7 +173,6 @@
     services.nextcloud = {
         enable = true;
         hostName = "0.0.0.0";
-        config.adminpassFile = "/etc/nextcloud-admin-pass";
         config.dbtype = "sqlite";
         settings.trusted_domains = [
             "localhost"
