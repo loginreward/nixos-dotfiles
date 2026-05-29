@@ -170,6 +170,13 @@
         openFirewall = true;
     };
 
+    services.nextcloud = {
+        enable = true;
+        hostName = "0.0.0.0";
+        config.adminpassFile = "/etc/nextcloud-admin-pass";
+        config.dbtype = "sqlite";
+    };
+
     boot.kernelPackages = pkgs.linuxPackages_zen;
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
